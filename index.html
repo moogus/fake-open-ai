@@ -3,6 +3,7 @@
   <head>
     <style>
       body, html {
+        background-color: #11100f;
         margin: 0;
         padding: 0;
         height: 100%;
@@ -16,6 +17,14 @@
     </style>
   </head>
   <body>
-    <iframe class="underside-shell-frame" id="chat" name="chat" frameborder="0" csp="frame-src https://www.bing.com/search https://edgeservices.bing.com/ https://www.bing.com/shop/productpage https://www.bing.com/images/create; base-uri 'self'; require-trusted-types-for 'script'" src="https://edgeservices.bing.com/edgesvc/chat?clientscopes=chat,noheader&amp;udsframed=1&amp;form=SHORUN&amp;shellsig=5b009fe89f4a157c403832672fb43d161e478ef0&amp;darkschemeovr=1"></iframe>
+    <iframe class="underside-shell-frame" id="chat" name="chat" frameborder="0"></iframe>
   </body>
+  <script>    
+    window.onload = function setiFrame() {
+        setTimeout(() => {
+          const openAI = 'https://edgeservices.bing.com/edgesvc/chat?clientscopes=chat,noheader&amp;udsframed=1&amp;form=SHORUN&amp;shellsig=5b009fe89f4a157c403832672fb43d161e478ef0&amp;darkschemeovr=1';
+          document.getElementById("chat").contentWindow.document.location.href = openAI;
+        });
+    };
+  </script>
 </html>
